@@ -28,35 +28,30 @@ Download and install from: https://ollama.com/download
 
 Start the Ollama server:
 
-bash
-Copy
-Edit
+```bash
 ollama serve
+```
 Linux
-bash
-Copy
-Edit
+```bash
 curl -fsSL https://ollama.com/install.sh | sh
 ollama serve
+```
 ⚠️ Make sure the Ollama server is running before using the chatbot.
 
 2. Pull the LLaMA 3.2 Model
-bash
-Copy
-Edit
+```bash
 ollama pull llama3
+```
 3. Clone the Repository
-bash
-Copy
-Edit
+```bash
 git clone https://github.com/your-username/meowrn-llama.git
 cd meowrn-llama
+```
+
 4. Install Dependencies
 Install root dependencies and then separately install frontend and backend dependencies.
 
-bash
-Copy
-Edit
+```bash
 # Root
 npm install
 
@@ -67,13 +62,14 @@ npm install
 # Frontend
 cd ../frontend
 npm install
+```
+
 💻 Running the App in Development
 Return to the root directory and run:
 
-bash
-Copy
-Edit
+```bash
 npm run start
+```
 This will use concurrently to run both:
 
 npm run server → starts the backend (node dist/index.js)
@@ -84,21 +80,18 @@ Make sure Ollama is running with the llama3 model loaded.
 
 🔧 Build for Production
 Backend
-bash
-Copy
-Edit
+```bash
 cd backend
 npm run build
+```
 Frontend
-bash
-Copy
-Edit
+```bash
 cd frontend
 npm run build
+```
+
 📂 Project Structure
-bash
-Copy
-Edit
+```bash
 meowrn-llama/
 ├── backend/         # TypeScript backend logic
 │   ├── src/
@@ -107,37 +100,35 @@ meowrn-llama/
 │   └── src/
 ├── package.json     # Root for concurrent scripts
 └── README.md
+```
+
 🧠 LLM Integration (Ollama)
 The chatbot interacts with the local Ollama server. Ensure the model is pulled and the daemon is running before launching the app:
 
-bash
-Copy
-Edit
+```bash
 ollama serve
-ollama pull llama3
+ollama pull llama3 (or other models)
+```
+
 📜 Scripts Overview
 🔹 Root package.json
-json
-Copy
-Edit
+```json
 "scripts": {
   "start": "concurrently \"npm run server\" \"npm run client\"",
   "server": "npm --prefix backend start",
   "client": "npm --prefix frontend start"
 }
+```
 🔹 Backend package.json
-json
-Copy
-Edit
+```json
 "scripts": {
   "dev": "concurrently \"tsc -w\" \"nodemon dist/index.js\"",
   "build": "tsc",
   "start": "node dist/index.js"
 }
+```
 🔹 Frontend package.json
-json
-Copy
-Edit
+```json
 "scripts": {
   "start": "vite",
   "dev": "vite",
@@ -145,9 +136,8 @@ Edit
   "lint": "eslint .",
   "preview": "vite preview"
 }
-📃 License
-MIT © 2025 Meowrn-Llama
+```
 
-yaml
-Copy
-Edit
+📃 WIPWOP
+© 2025 Meowrn-Llama
+
