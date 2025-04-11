@@ -22,10 +22,11 @@
 #### macOS
 ```bash
 brew install ollama
+```
 Windows (WSL recommended)
 Download and install from: https://ollama.com/download
 
-Start Ollama:
+Start the Ollama server:
 
 bash
 Copy
@@ -107,7 +108,7 @@ meowrn-llama/
 ├── package.json     # Root for concurrent scripts
 └── README.md
 🧠 LLM Integration (Ollama)
-The chatbot interacts with the local Ollama server. Ensure the model is pulled and the daemon is running before launching the app.
+The chatbot interacts with the local Ollama server. Ensure the model is pulled and the daemon is running before launching the app:
 
 bash
 Copy
@@ -147,8 +148,6 @@ Edit
 📃 License
 MIT © 2025 Meowrn-Llama
 
-vbnet
+yaml
 Copy
 Edit
-
-Let me know if you want a version with badges, contribution guidelines, Docker setup, or deployment instructions!
