@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;800&family=Work+Sans&display=swap");
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', sans-serif; /* Ensure correct font is used */
+    color: white;
+    background-color: #05101c;
+}
+
+/* Invert image filter for certain images */
+.image-inverted {
+    filter: invert(100%);
+}
+
+/* General Styling for Links */
+.nav-link {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 8px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Login Button */
+.nav-link.login {
+    background: #39424E;
+    color: #A3ABB2;
+}
+
+.nav-link.login:hover {
+    background: #4B5D67;
+}
+
+/* Signup Button */
+.nav-link.signup {
+    background: #1B2A35;
+    color: #A3ABB2;
+}
+
+.nav-link.signup:hover {
+    background: #473131;
+}
+
+/* Logout Button */
+.nav-link.logout {
+    background: #630303;
+    color: #06101c;
+}
+
+.nav-link.logout:hover {
+    background: #4e0202 ;
+}
+
+/* Chat Button */
+.nav-link.chat {
+    background: #39424E;
+    color: #06101c;
+}
+
+.nav-link.chat:hover {
+    background: #2d3a44;
+}

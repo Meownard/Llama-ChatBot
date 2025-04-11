@@ -1,0 +1,165 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;800&family=Work+Sans&display=swap");
+
+/*===== SIGNUP PAGE STYLES =====*/
+.signup-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #05101c; /* Background color for signup page */
+}
+
+.signup-form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 20px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.signup-form {
+  width: 100%;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(92, 99, 105, 0.2);
+  background-color: #06101c;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+.signup-form-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.signup-form-field {
+  position: relative;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.signup-form-input {
+  width: 93%;
+  height: 30px; /* Slightly taller input field */
+  padding: 0.8rem 1rem;
+  border: 2px solid #DADCE0;
+  border-radius: 8px; /* More rounded input field */
+  outline: none;
+  background: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.signup-form-label {
+  position: absolute;
+  top: 12px;
+  left: 1rem;
+  font-size: 1rem;
+  color: #80868B; /* Color for label */
+  background-color: #06101c;
+  padding: 0 0.25rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.signup-form-input:focus {
+  border-color: #64f3d5; /* Update focus border color */
+}
+
+.signup-form-input:focus + .signup-form-label,
+.signup-form-input:not(:placeholder-shown).signup-form-input:not(:focus) + .signup-form-label {
+  top: -8px;
+  left: 0.8rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #64f3d5; /* Focus label color */
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #80868B;
+  font-size: 0.875rem;
+}
+
+.signup-submit-button {
+  padding: 12px 20px;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  background-color: #39424E;
+  color: #A3ABB2;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.signup-submit-button:hover {
+  background-color: #4B5D67;
+  color: #fff;
+}
+
+.signup-submit-button:disabled {
+  background-color: #6B7B8C;
+  cursor: not-allowed;
+}
+
+/* Adding responsive adjustments */
+@media (max-width: 480px) {
+  .signup-form {
+    width: 90%;
+    padding: 2rem 1.5rem;
+  }
+  .signup-form-input {
+    padding: 1rem;
+  }
+}
+
+/* Error and success message styles */
+.toast {
+  font-family: 'Roboto Slab', sans-serif;
+  background-color: #06101c;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.toast-error {
+  background-color: #d32f2f; /* Red background for error */
+}
+
+.toast-success {
+  background-color: #388e3c; /* Green background for success */
+}
+
+/* Adding fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

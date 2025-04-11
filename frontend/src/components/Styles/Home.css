@@ -1,0 +1,140 @@
+.home-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Inner Content */
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+  /* Typing Header */
+  .typing-box {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .typing-text {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #64f3d5;
+    animation: typing 2s steps(25), blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #64f3d5;
+    max-width: 100%;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  /* Fade in */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Description */
+  .info-section {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 0 1rem;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    color: #A3ABB2;
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+  
+  .highlight-text {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  
+  /* Demo Conversation */
+  .demo-box {
+    background-color: #0b1a2b;
+    border: 1px solid #1c2b3a;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .message-box {
+    margin: 0.5rem 0;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.4;
+    max-width: 80%;
+    word-wrap: break-word;
+    transition: background-color 0.3s ease;
+  }
+  
+  .user-msg {
+    background-color: #133c55;
+    color: #ffffff;
+    align-self: flex-end;
+    margin-left: auto;
+  }
+  
+  .bot-msg {
+    background-color: #1f4e66;
+    color: #ffffff;
+    align-self: flex-start;
+    margin-right: auto;
+  }
+  
+  /* CTA Button */
+  .cta-button {
+    margin-top: 2rem;
+    background: #64f3d5;
+    color: #05101c;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background: #52cdb7;
+  }
