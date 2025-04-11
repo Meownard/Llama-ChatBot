@@ -1,33 +1,31 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = require("express");
-const token_manager_1 = require("../utils/token-manager");
-const validators_1 = require("../utils/validators");
-const chat_controller_1 = require("../controllers/chat-controller");
-const chatRoutes = (0, express_1.Router)();
-chatRoutes.post("/new", (0, validators_1.validate)(validators_1.chatCompletionValidator), token_manager_1.verifyToken, async (req, res, next) => {
+import { Router } from "express";
+import { verifyToken } from "../utils/token-manager.js";
+import { chatCompletionValidator, validate } from "../utils/validators.js";
+import { deleteChats, generateChatCompletion, sendChatsToUser } from "../controllers/chat-controller.js";
+const chatRoutes = Router();
+chatRoutes.post("/new", validate(chatCompletionValidator), verifyToken, async (req, res, next) => {
     try {
-        await (0, chat_controller_1.generateChatCompletion)(req, res);
+        await generateChatCompletion(req, res);
     }
     catch (error) {
         next(error);
     }
 });
-chatRoutes.get("/all-chats", token_manager_1.verifyToken, async (req, res, next) => {
+chatRoutes.get("/all-chats", verifyToken, async (req, res, next) => {
     try {
-        await (0, chat_controller_1.sendChatsToUser)(req, res);
+        await sendChatsToUser(req, res);
     }
     catch (error) {
         next(error);
     }
 });
-chatRoutes.delete("/delete", token_manager_1.verifyToken, async (req, res, next) => {
+chatRoutes.delete("/delete", verifyToken, async (req, res, next) => {
     try {
-        await (0, chat_controller_1.deleteChats)(req, res);
+        await deleteChats(req, res);
     }
     catch (error) {
         next(error);
     }
 });
-exports.default = chatRoutes;
+export default chatRoutes;
 //# sourceMappingURL=chat-routes.js.map

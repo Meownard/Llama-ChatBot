@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
-import User from "../models/users";
-import OLLAMA_HOST from "../config/ollama-config"; // Import the Ollama host
+import User from "../models/users.js";
+import OLLAMA_HOST from "../config/ollama-config.js"; // Import the Ollama host
 
 import axios from "axios"; // Import axios
 

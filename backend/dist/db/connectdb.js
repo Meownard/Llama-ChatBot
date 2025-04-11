@@ -1,11 +1,7 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.connectToDatabase = connectToDatabase;
-exports.disconnectFromDatabase = disconnectFromDatabase;
-const mongoose_1 = require("mongoose");
+import { connect, disconnect } from "mongoose";
 async function connectToDatabase() {
     try {
-        await (0, mongoose_1.connect)(process.env.MONGODB_URL);
+        await connect(process.env.MONGODB_URL);
     }
     catch (error) {
         console.log(error);
@@ -14,11 +10,12 @@ async function connectToDatabase() {
 }
 async function disconnectFromDatabase() {
     try {
-        await (0, mongoose_1.disconnect)();
+        await disconnect();
     }
     catch (error) {
         console.log(error);
         throw new Error("Could not Disconnect From MongoDB");
     }
 }
+export { connectToDatabase, disconnectFromDatabase };
 //# sourceMappingURL=connectdb.js.map
